@@ -15,6 +15,7 @@ import {
 	useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
+import ThemeToggleButton from './theme-toggle-button.js'
 
 const LinkItem = ({ href, path, children}) => {
 
@@ -52,36 +53,42 @@ const Navbar = props => {
 					alignItems="center"
 					flexGlow={1}
 					mt={{base:4, nmd:0}}>
-
+					<LinkItem href="/" path={path}>
+						About
+					</LinkItem>
 					<LinkItem href="/works" path={path}>
 						Works
 					</LinkItem>
 					<LinkItem href="/posts" path={path}>
 						Posts
 					</LinkItem>
+					<LinkItem as={Link} href="https://github.com/firdodev">
+						View Source
+					</LinkItem>
 				</Stack>
 
 				<Box flex={1} align="right">
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu isLazy id="navbar-menu">
-              <MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options" />
-              <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
-                <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
-                </NextLink>
-                <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
-                </NextLink>
-                <MenuItem as={Link} href="https://github.com/craftzdog/craftzdog-homepage">
-                  View Source
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          </Box>
-        </Box>
+					<ThemeToggleButton />
+					<Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+						<Menu isLazy id="navbar-menu">
+						<MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options" />
+						<MenuList>
+							<NextLink href="/" passHref>
+							<MenuItem as={Link}>About</MenuItem>
+							</NextLink>
+							<NextLink href="/works" passHref>
+							<MenuItem as={Link}>Works</MenuItem>
+							</NextLink>
+							<NextLink href="/posts" passHref>
+							<MenuItem as={Link}>Posts</MenuItem>
+							</NextLink>
+							<MenuItem as={Link} href="https://github.com/firdodev">
+							View Source
+							</MenuItem>
+						</MenuList>
+						</Menu>
+					</Box>
+				</Box>
 			</Container>
 		</Box>
 	)
