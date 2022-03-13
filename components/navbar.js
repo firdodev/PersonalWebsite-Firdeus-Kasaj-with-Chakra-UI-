@@ -53,7 +53,7 @@ const Navbar = props => {
 					alignItems="center"
 					flexGlow={1}
 					mt={{base:4, nmd:0}}>
-					<LinkItem href="/" path={path}>
+					<LinkItem href="/about" path={path}>
 						About
 					</LinkItem>
 					<LinkItem href="/works" path={path}>
@@ -73,7 +73,7 @@ const Navbar = props => {
 						<Menu isLazy id="navbar-menu">
 						<MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options" />
 						<MenuList>
-							<NextLink href="/" passHref>
+							<NextLink href="/about" passHref>
 							<MenuItem as={Link}>About</MenuItem>
 							</NextLink>
 							<NextLink href="/works" passHref>
@@ -83,7 +83,7 @@ const Navbar = props => {
 							<MenuItem as={Link}>Posts</MenuItem>
 							</NextLink>
 							<MenuItem as={Link} href="https://github.com/firdodev">
-							View Source
+								View Source
 							</MenuItem>
 						</MenuList>
 						</Menu>
