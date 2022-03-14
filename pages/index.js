@@ -3,22 +3,22 @@ import { Container, Box, Heading, Image, useColorModeValue, Link, Button } from 
 import Section from "../components/section"
 import Paragraph from "../components/paragraph"
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import Layout from '../components/layouts/article'
 import { BioSection, BioYear } from '../components/bio'
 
 const Page = () => {
 	return 	(
-		
+		<Layout>
 		<Container>
 			<Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500','whiteAlpha.200')} p={3} mb={6} align="center">
 				Hello, I&apos;m a full-stack developer based in Albania!
 			</Box>
-			
 			<Box display={{md:'flex'}}>
 				<Box flexGrow={1}>
 					<Heading as="h2" variant="page-title">
 						Firdeus Kasaj
 					</Heading>
-					<p>Developer</p>
+					<p>Game Developer (Mobile Developer & Website Developer)</p>
 				</Box>
 				<Box flexShrink={0} mt={{base:4, md:0}} ml={{md:6}} align="center">
 					<Image borderColor="whiteAlphha.800" borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="/images/about_2.jpg" alt="Profile Image" />
@@ -42,6 +42,7 @@ const Page = () => {
 					</NextLink>
 				</Box>
 			</Section>
+			
 			{/* Bio */}
 			<Section delay={0.2}>
 				<Heading as="h3" variant="section-title">
@@ -60,6 +61,7 @@ const Page = () => {
 					Had his first inernship at EasyPay, where i was creating a database managment with .net 
 				</BioSection>
 			</Section>
+			
 			{/* I ♥ */}
 			<Section delay={0.2}>
 				<Heading as="h3" variant="section-title">
@@ -68,7 +70,7 @@ const Page = () => {
 				<Paragraph>Art, Machine Learning, AI, Robotics, Swiming, Photography</Paragraph>
 			</Section>
 		</Container>
-		
+		</Layout>
 	)
 }
 
