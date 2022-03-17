@@ -1,10 +1,11 @@
 import NextLink from 'next/link'
-import { Container, Box, Heading, Image, useColorModeValue, Link, Button } from "@chakra-ui/react"
+import { Container, Box, Heading, Image, useColorModeValue, Link, Button, List, ListItem } from "@chakra-ui/react"
 import Section from "../components/section"
 import Paragraph from "../components/paragraph"
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 import { BioSection, BioYear } from '../components/bio'
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 
 const Page = () => {
 	return 	(
@@ -29,8 +30,8 @@ const Page = () => {
 					Work
 				</Heading>
 				<Paragraph>High level experience in web design, game development, mobile development and development knowledge, producing quality work.{' '}
-				<NextLink href="/works/KingandPigs">
-					<Link>King And Pigs</Link>
+				<NextLink href="/works/dinoBurgers">
+					<Link>Dino Burgers</Link>
 				</NextLink>
 				.
 				</Paragraph>
@@ -69,6 +70,36 @@ const Page = () => {
 				</Heading>
 				<Paragraph>Art, Machine Learning, AI, Robotics, Swiming, Photography</Paragraph>
 			</Section>
+
+			<Section delay={0.3}>
+			<Heading as="h3" variant="section-title">
+				On the web
+			</Heading>
+			<List>
+			<ListItem>
+				<Link href="https://github.com/firdodev" target="_blank">
+				<Button
+					variant="ghost"
+					colorScheme="teal"
+					leftIcon={<IoLogoGithub />}
+				>
+					@firdodev
+				</Button>
+				</Link>
+			</ListItem>
+			<ListItem>
+				<Link href="https://www.instagram.com/firdo.dev/" target="_blank">
+				<Button
+					variant="ghost"
+					colorScheme="teal"
+					leftIcon={<IoLogoInstagram />}
+				>
+					@Firdo.Dev
+				</Button>
+				</Link>
+			</ListItem>
+			</List>
+		</Section>
 		</Container>
 		</Layout>
 	)
