@@ -5,7 +5,7 @@ import Paragraph from "../components/paragraph"
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 import { BioSection, BioYear } from '../components/bio'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 
 const Page = () => {
 	return 	(
